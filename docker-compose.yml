@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+
+  php:
+    image: reevo-php
+    container_name: reevo-php
+    build:
+      context: ./php
+    volumes:
+      - ./app:/var/www/html
+    env_file:
+      - .env
